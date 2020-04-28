@@ -3,13 +3,15 @@ Description=Icq Bot
 After=network.target
 
 [Service]
+Type=oneshot
 User=damir
 Group=damir
 
 WorkingDirectory=/home/damir/icqcoronabot/
 Environment="PYTHONPATH=/home/damir/icqcoronabot/"
 ExecStart=/home/damir/icqcoronabot/.venv/bin/python /home/damir/icqcoronabot/icqbot.py
-
+ExecStartPost=/home/damir/icqcoronabot/.venv/bin/python /home/damir/icqcoronabot/main.py
+ExecStartPost=/home/damir/icqcoronabot/.venv/bin/python /home/damir/icqcoronabot/subcribe.py
 
 [Install]
 WantedBy=multi-user.target
