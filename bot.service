@@ -5,12 +5,11 @@ After=network.target
 [Service]
 User=vladimir
 Group=vladimir
-Type=oneshot
+
 WorkingDirectory=/home/vladimir/icqcoronabot/
 Environment="PYTHONPATH=/home/vladimir/icqcoronabot/"
 ExecStart=/home/vladimir/icqcoronabot/.venv/bin/python /home/vladimir/icqcoronabot/subcribe.py
-ExecStartPost=/home/vladimir/icqcoronabot/.venv/bin/python /home/vladimir/icqcoronabot/main.py
-ExecStartPost=/home/vladimir/icqcoronabot/.venv/bin/python /home/vladimir/icqcoronabot/icqbot.py
+
 
 [Install]
 WantedBy=multi-user.target
