@@ -19,9 +19,8 @@ def send():
                        f"Выздоровело: {cases.loc['World', 'Total Recovered']}\n\n")
 
 
-schedule.every().day.at("9:00").do(send)
-schedule.every().day.at("14:00").do(send)
-schedule.every().day.at("21:00").do(send)
+schedule.every(7).hours.do(send)
+
 while True:
     schedule.run_pending()
     time.sleep(1)
