@@ -9,7 +9,8 @@ Group=vladimir
 WorkingDirectory=/home/vladimir/icqcoronabot/
 Environment="PYTHONPATH=/home/vladimir/icqcoronabot/"
 ExecStart=/home/vladimir/icqcoronabot/.venv/bin/python /home/vladimir/icqcoronabot/subcribe.py
-
+ExecStart=/home/vladimir/icqcoronabot/.venv/bin/python /home/vladimir/icqcoronabot/main.py
+ExecStart=/home/vladimir/icqcoronabot/.venv/bin/python /home/vladimir/icqcoronabot/icqbot.py
 
 [Install]
 WantedBy=multi-user.target
