@@ -3,6 +3,8 @@ Description=Icq Bot
 After=network.target
 
 [Service]
+Type=simple
+TimeoutSec=0
 User=damir
 Group=damir
 
